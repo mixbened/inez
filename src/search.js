@@ -17,8 +17,12 @@ export const search = function(keyword){
             winner = products[i]
         } 
     }
-    // console.log(winner)
-    return winner
+    // eslint-disable-next-line no-console
+    console.log(winner)
+    return {
+        winner,
+        count: 5
+    }
 }
 
 const products = [
