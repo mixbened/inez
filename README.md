@@ -22,7 +22,7 @@ Falls das Programm lokal ausgeführt werden soll, im Root Ordner mittels ```npm 
 
 ### Tests ausführen
 
-Zum Testen werden E2E Tests mittels Cypress verwendet. Die Test-Engine sicher die grundsätzlich Funktionsweise des Programms. Zum ausführen der Tests einfach ```npm run test```ausführen.
+Zum Testen werden E2E Tests mittels Cypress verwendet. Die Test-Engine sicher die grundsätzlich Funktionsweise des Programms. Zum ausführen der Tests einfach ```npm run test```ausführen. Damit Cypress allerdings die App verwenden kann, muss vorher der die App auf Port 8080 ausgeführt werden. Wie beschrieben in 'Programm ausführen'.
 
 ### Dependencies
 
