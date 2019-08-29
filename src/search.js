@@ -1,5 +1,6 @@
 const fuzz = require('fuzzball')
 
+// this function uses the fuzzball package to search for similarity in the search keyword and the product list
 export const search = function(keyword){
     
     // console.log('Current Keyword ', keyword)
@@ -18,10 +19,28 @@ export const search = function(keyword){
         } 
     }
     // eslint-disable-next-line no-console
-    console.log(winner)
+    // console.log(winner)
+    const count = extractNumber(keyword)
+    // console.log('Count ', count)
     return {
         winner,
-        count: 5
+        count
+    }
+}
+
+// this function is used to find a number in the beginning or end of a string and extracts it
+function extractNumber(str){
+    // regex for digits
+    const r = /\d+/;
+    const match = str.match(r)
+    if(match){
+        if(match > 5) {
+            return "5"
+        } else {
+            return match[0]
+        }
+    } else {
+        return "1"
     }
 }
 

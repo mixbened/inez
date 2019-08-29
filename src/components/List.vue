@@ -1,14 +1,14 @@
 <template>
   <div>
     <div v-on:click="toggle" class="cartContainer">
-      <b-icon icon="cart" size="is-medium"></b-icon>
+      <b-icon icon="cart" size="is-medium" data-cy="cart"></b-icon>
     </div>
     <b-modal :active.sync="show">
       <div class="box listContainer">
         <h2 class="title is-2">Dein Merkzettel</h2>
         <ul class="producList">
           <p v-if="!list.length">Füge Produkte zu deiner Liste hinzu, um sie hier zu sehen</p>
-          <li class="productItem" v-for="(product,i) in list" v-bind:key="i">
+          <li class="productItem" v-for="(product,i) in list" v-bind:key="i" data-cy="cartItem">
             <p>{{ product.winner }}</p>
             <div class="columns">
               <b-select placeholder="Anzahl" v-model="product.count">
@@ -86,5 +86,8 @@ body {
     right: 1em;
     color: white;
     cursor: pointer;
+}
+.animation {
+  transform: scale(1.5);
 }
 </style>

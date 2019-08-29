@@ -1,14 +1,14 @@
 <template>
   <div>
     <h1 class="title">INEZ</h1>
-    <h2 class="subtitle">Subtitle</h2>
-    <div class="searchContainer">
-      <b-field style="width: 50%; margin: 5% auto;">
-        <b-input placeholder="Was möchtest du kaufen?" v-on:input="setWinner" v-model="keyword" rounded></b-input>
+    <h2 class="subtitle">Your Smart Shopping List</h2>
+    <div class="searchContainer" v-on:keyup.enter="addToCart">
+      <b-field style="width: 50%; margin: 5% auto;" data-cy="search">
+        <b-input ref="search" placeholder="Was möchtest du kaufen?" v-on:input="setWinner" v-model="keyword" rounded></b-input>
       </b-field>
       <hr>
       <div v-if="keyword.length > 3">
-        <Product v-bind:product="winner" />
+        <Product ref="product" v-on:add="reset" v-bind:product="winner" />
       </div>
     </div>
   </div>
@@ -31,8 +31,15 @@ export default {
   },
   methods: {
     setWinner: function(){
-      console.log('Set winner runs')
       this.winner = search(this.keyword)
+    },
+    reset: function(){
+      this.keyword = ''
+      this.$refs.search.focus()
+    },
+    addToCart: function(){
+      this.$refs.product.addToCart()
+      this.reset()
     }
   }
 }
