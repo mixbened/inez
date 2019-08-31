@@ -33,3 +33,7 @@ Für das Fuzzy Word Matching wird die JavaScript Library *fuzzball* verwendet. S
 Zudem wird das CSS Framework bulma verwendet. - https://bulma.io/
 
 Zum Testen wird die Test Engine cypress verwendet. - http://cypress.io/
+
+### DATA
+
+Die App basiert aktuell auf Testdaten. Dies sind Beispielprodukte aus dem Sortiment on Edeka um die Funktionsweise zu testen. Festgelegt als JS Array in 'search.js'.

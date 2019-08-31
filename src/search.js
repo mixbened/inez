@@ -44,11 +44,13 @@ function extractNumber(str){
     }
 }
 
+// dummy data
 const products = [
-    'Some Product',
-    'Milk',
-    'Eggs',
-    '1 Liter Milch Gut & Günstig',
-    'Ehrmann Almighurt 320ml',
-    'Radeberger Pilsener 20x 0,5L'
+    'Rügenwalder Mühle Schinken Spicker',
+    'funny-frisch Linsen Chips',
+    'Dr. Oetker Vitalis Müsli',
+    'Mini Rispentomaten',
+    'Granini Fruchtsäfte',
+    'Tafeltrauben',
+    'Original Wagner Steinofen Pizza'
 ]
